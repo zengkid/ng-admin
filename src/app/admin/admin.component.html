@@ -1,0 +1,27 @@
+<nb-layout>
+
+    <nb-layout-header subheader fixed>
+      <!-- <nb-icon (click)="toggleSidebar()" class="sidebar-toggle" icon="menu-2-outline"></nb-icon> -->
+      <nb-actions style="flex: auto;">
+        <nb-action (click)="toggleSidebar()" icon="menu-2-outline"></nb-action>
+        <nb-action icon="home-outline"></nb-action>
+        <nb-action style="flex: auto"></nb-action>
+        <nb-action icon="search-outline"></nb-action>
+        <nb-action icon="person-outline"></nb-action>
+        <nb-action icon="power-outline"></nb-action>
+      </nb-actions>
+    </nb-layout-header>
+  
+    <nb-sidebar>
+      <nb-menu [items]="items"></nb-menu>
+    </nb-sidebar>
+  
+    <nb-layout-column >
+        <router-outlet></router-outlet>
+    </nb-layout-column>
+  
+    <nb-layout-footer>footer</nb-layout-footer>
+  
+  </nb-layout>
+  
+  
