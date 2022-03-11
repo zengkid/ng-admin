@@ -8,10 +8,18 @@ import { AdminComponent } from './admin/admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbIconModule, NbSidebarModule, NbMenuModule, NbActionsModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { LogoutComponent } from './pages/logout/logout.component';
+import { LoginComponent } from './pages/login/login.component';
+import { Page1Component } from './admin/page1/page1.component';
+import { Page2Component } from './admin/page2/page2.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent
+    AdminComponent,
+    LogoutComponent,
+    LoginComponent,
+    Page1Component,
+    Page2Component
   ],
   imports: [
     BrowserModule,

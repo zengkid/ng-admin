@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NbMenuItem, NbSidebarService } from '@nebular/theme';
 
 @Component({
@@ -22,15 +23,15 @@ export class AdminComponent implements OnInit {
     }
   ];
 
-  constructor(private readonly sidebarService: NbSidebarService) {
-    this.items =  [
+  constructor(private readonly sidebarService: NbSidebarService, private router: Router,) {
+    this.items = [
       {
         title: 'Profile',
         icon: 'people-outline',
         expanded: true,
         children: [
           {
-            title: 'Change Password',          
+            title: 'Change Password',
             icon: 'people-outline',
           },
           {
@@ -42,41 +43,19 @@ export class AdminComponent implements OnInit {
         ],
       },
       {
-        title: 'Shopping Bag',
-        icon: 'people-outline',
+        title: 'pages',
         children: [
           {
-            title: 'First Product',
+            title: 'page1',
+            link: '/admin/page1'
           },
           {
-            title: 'Second Product',
-          },
-          {
-            title: 'Third Product',
-          },
-        ],
-      },
-      {
-        title: 'Orders',
-        children: [
-          {
-            title: 'First Order',
-          },
-          {
-            title: 'Second Order',
-          },
-          {
-            title: 'Third Order',
+            title: 'page2',
+            link: '/admin/page2'
           },
         ],
       },
     ];
-    // for (let i = 0; i < 20; i++) {
-    //   const menuItem = new NbMenuItem();
-    //   menuItem.title = 'Menu_' + i;
-    //   menuItem.link = '/link' + i;
-    //   this.items.push(menuItem);
-    // }
   }
   ngOnInit(): void {
   }
@@ -84,6 +63,11 @@ export class AdminComponent implements OnInit {
   toggleSidebar() {
     this.sidebarService.toggle(true)
     // return false;
+  }
+
+  logout() {
+    this.router.navigate(['/login'])
+
   }
 
 }
