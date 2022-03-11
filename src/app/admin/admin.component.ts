@@ -79,7 +79,6 @@ export class AdminComponent implements OnInit {
     // }
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
   toggleSidebar() {
