@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent {
+  panelOpenState = false;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

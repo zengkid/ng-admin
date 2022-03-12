@@ -9,13 +9,19 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { Page1Component } from './admin/pages/page1/page1.component';
+import { Page2Component } from './admin/pages/page2/page2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent
+    AdminComponent,
+    Page1Component,
+    Page2Component
   ],
   imports: [
     BrowserModule,
@@ -25,6 +31,7 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
+    MatExpansionModule,
     MatIconModule,
     MatListModule
   ],
