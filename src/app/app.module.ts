@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { Page1Component } from './admin/pages/page1/page1.component';
 import { Page2Component } from './admin/pages/page2/page2.component';
+import { MultilevelMenuService, NgMaterialMultilevelMenuModule } from 'ng-material-multilevel-menu';
 
 @NgModule({
   declarations: [
@@ -33,9 +34,10 @@ import { Page2Component } from './admin/pages/page2/page2.component';
     MatSidenavModule,
     MatExpansionModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    NgMaterialMultilevelMenuModule 
   ],
-  providers: [],
+  providers: [MultilevelMenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
