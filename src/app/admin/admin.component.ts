@@ -3,7 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { Configuration, ExpandedLTR, ExpandedRTL, MultilevelNodes, SlideInOut } from 'ng-material-multilevel-menu';
+import { Configuration, ExpandedLTR, ExpandedRTL, MultilevelMenuService, MultilevelNodes, SlideInOut } from 'ng-material-multilevel-menu';
 
 @Component({
   selector: 'app-admin',
@@ -16,44 +16,46 @@ export class AdminComponent {
   panelOpenState = false;
 
 
-  appItems  = [
-   
+  appItems = [
+
     {
       label: 'Page',
-      // icon: 'alarm',
       items: [
         {
           label: 'Page 1',
           // icon: 'favorite',
-          link:'/admin/page1'
+          link: '/admin/page1'
         },
         {
           label: 'Page 2',
           // icon: 'favorite_border',
-          link:'/admin/page2'
+          link: '/admin/page2'
         },
       ],
     },
-    {
-      label: 'Page',
-      // icon: 'alarm',
-      items: [
-        {
-          label: 'Page 1',
-          // icon: 'favorite',
-          link:'/admin/page1'
-        },
-        {
-          label: 'Page 2',
-          // icon: 'favorite_border',
-          link:'/admin/page2'
-        },
-      ],
-    }
+    // {
+    //   id:'page2',
+    //   label: 'Page',
+    //   // icon: 'alarm',
+    //   items: [
+    //     {
+    //       id:'page2-1',
+    //       label: 'Page 1',
+    //       // icon: 'favorite',
+    //       link:'/admin/page1'
+    //     },
+    //     {
+    //       id:'page2-2',
+    //       label: 'Page 2',
+    //       // icon: 'favorite_border',
+    //       link:'/admin/page2'
+    //     },
+    //   ],
+    // }
   ];
 
   config = {
-    // paddingAtStart: true,
+    paddingAtStart: true,
     interfaceWithRoute: true,
     collapseOnSelect: true,
     highlightOnSelect: true,
@@ -74,7 +76,13 @@ export class AdminComponent {
       shareReplay()
     );
 
-  constructor(private router: Router, private breakpointObserver: BreakpointObserver) { }
+  constructor(private router: Router, private breakpointObserver: BreakpointObserver) {
+    var url = router.url;
+    console.log('url: ' + url);
+    // var node =  multilevelMenuService.getMatchedObjectByUrl(this.appItems, url);
+    // multilevelMenuService.selectMenuByID(node.id!);
+    // multilevelMenuService.setMenuExapandCollpaseStatus()
+  }
 
   logout() {
     this.router.navigate(['/login'])
