@@ -26,32 +26,23 @@ export class AdminComponent implements OnInit {
   constructor(private readonly sidebarService: NbSidebarService, private router: Router,) {
     this.items = [
       {
-        title: 'Profile',
-        icon: 'people-outline',
-        expanded: true,
+        title: 'Security',
+        icon: { icon: 'shield-blank', pack: 'fa' },
         children: [
           {
-            title: 'Change Password',
-            icon: 'people-outline',
-          },
-          {
-            title: 'Privacy Policy',
-          },
-          {
-            title: 'Logout',
-          },
-        ],
-      },
-      {
-        title: 'pages',
-        children: [
-          {
-            title: 'page1',
+            title: 'User',
+            icon: { icon: 'user', pack: 'fa' },
             link: '/admin/page1'
           },
           {
-            title: 'page2',
+            title: 'Role',
+            icon: { icon: 'user-group', pack: 'fa' },
             link: '/admin/page2'
+          },
+          {
+            title: 'Permission',
+            icon: { icon: 'clover', pack: 'fa' },
+            link: '/admin/page3'
           },
         ],
       },

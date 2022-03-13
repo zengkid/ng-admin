@@ -12,6 +12,7 @@ import { LogoutComponent } from './pages/logout/logout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { Page1Component } from './admin/page1/page1.component';
 import { Page2Component } from './admin/page2/page2.component';
+import { Page3Component } from './admin/page3/page3.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { Page2Component } from './admin/page2/page2.component';
     LogoutComponent,
     LoginComponent,
     Page1Component,
-    Page2Component
+    Page2Component,
+    Page3Component
   ],
   imports: [
     BrowserModule,
