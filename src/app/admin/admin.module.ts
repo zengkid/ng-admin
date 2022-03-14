@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
-import { NbActionsModule, NbIconModule, NbLayoutModule, NbMenuModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
+
 import { UserComponent } from './security/user/user.component';
 import { RoleComponent } from './security/role/role.component';
 import { PermissionComponent } from './security/permission/permission.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NbActionsModule, NbIconModule, NbLayoutModule, NbMenuModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [
     CommonModule,
     AdminRoutingModule,
+    // BrowserAnimationsModule,
     NbIconModule,               // <---------
     NbSidebarModule.forRoot(),  // <---------
     NbMenuModule.forRoot(),     // <---------
@@ -29,6 +31,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NbLayoutModule,
     NbActionsModule,
     NbEvaIconsModule,
-  ]
+    NbEvaIconsModule,
+  ] 
 })
 export class AdminModule { }
