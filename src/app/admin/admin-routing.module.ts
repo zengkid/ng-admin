@@ -9,7 +9,7 @@ import { UserComponent } from './security/user/user.component';
 const routes: Routes = [{
   path: '', component: AdminComponent,
   children: [
-    {path: '', component: DashboardComponent},
+    { path: '', component: DashboardComponent },
     { path: 'user', component: UserComponent },
     { path: 'role', component: RoleComponent },
     { path: 'permission', component: PermissionComponent },
