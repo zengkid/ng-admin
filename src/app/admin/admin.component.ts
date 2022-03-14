@@ -8,23 +8,18 @@ import { NbMenuItem, NbSidebarService } from '@nebular/theme';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
+  items: NbMenuItem[];
 
-  items: NbMenuItem[] = [
-    {
-      title: 'Home',
-      icon: 'home-outline',
-      link: '/home',
-      home: true
-    },
-    {
-      title: 'Users',
-      icon: 'people-outline',
-      link: '/users'
-    }
-  ];
+  ngOnInit(): void {
+  }
 
   constructor(private readonly sidebarService: NbSidebarService, private router: Router,) {
     this.items = [
+      {
+      title: 'DashBoard',
+      link: '/admin',
+      icon: { icon: 'home', pack: 'fa' },
+    },
       {
         title: 'Security',
         icon: { icon: 'shield-blank', pack: 'fa' },
@@ -32,23 +27,21 @@ export class AdminComponent implements OnInit {
           {
             title: 'User',
             icon: { icon: 'user', pack: 'fa' },
-            link: '/admin/page1'
+            link: '/admin/user'
           },
           {
             title: 'Role',
             icon: { icon: 'user-group', pack: 'fa' },
-            link: '/admin/page2'
+            link: '/admin/role'
           },
           {
             title: 'Permission',
             icon: { icon: 'clover', pack: 'fa' },
-            link: '/admin/page3'
+            link: '/admin/permission'
           },
         ],
       },
     ];
-  }
-  ngOnInit(): void {
   }
 
   toggleSidebar() {
@@ -60,5 +53,4 @@ export class AdminComponent implements OnInit {
     this.router.navigate(['/login'])
 
   }
-
 }
