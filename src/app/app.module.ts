@@ -15,14 +15,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { Page1Component } from './admin/pages/page1/page1.component';
 import { Page2Component } from './admin/pages/page2/page2.component';
-import { MultilevelMenuService, NgMaterialMultilevelMenuModule } from 'ng-material-multilevel-menu';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     Page1Component,
-    Page2Component
+    Page2Component,
   ],
   imports: [
     BrowserModule,
@@ -35,9 +35,9 @@ import { MultilevelMenuService, NgMaterialMultilevelMenuModule } from 'ng-materi
     MatExpansionModule,
     MatIconModule,
     MatListModule,
-    NgMaterialMultilevelMenuModule 
+    MatDividerModule,
   ],
-  providers: [MultilevelMenuService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
