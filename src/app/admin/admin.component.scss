@@ -1,14 +1,3 @@
-mat-expansion-panel {
-  margin: 0;
-}
-
-.mat-expansion-panel-header {
-  height: 32px;
-}
-
-.mat-expansion-panel-header.mat-expanded {
-  height: 32px;
-}
 
 .sidenav-container {
   height: 100%;
@@ -16,6 +5,10 @@ mat-expansion-panel {
 
 .sidenav {
   width: 200px;
+}
+
+mat-sidenav {
+  position: absolute;
 }
 
 .sidenav .mat-toolbar {

@@ -1,3 +1,14 @@
+<mat-toolbar color="primary">
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <span>ng-admin</span>
+    <span class="spacer"></span>
+    <button mat-icon-button type="button" (click)="logout()">
+      <mat-icon aria-label="Side nav toggle icon" class="material-icons">logout</mat-icon>
+    </button>
+
+  </mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
@@ -16,17 +27,7 @@
 
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>ng-admin</span>
-      <span class="spacer"></span>
-      <button mat-icon-button type="button" (click)="logout()">
-        <mat-icon aria-label="Side nav toggle icon" class="material-icons">logout</mat-icon>
-      </button>
-
-    </mat-toolbar>
+   
 
     <div class="content">
       <router-outlet></router-outlet>
