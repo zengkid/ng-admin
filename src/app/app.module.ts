@@ -16,6 +16,7 @@ import { MatListModule } from '@angular/material/list';
 import { Page1Component } from './admin/pages/page1/page1.component';
 import { Page2Component } from './admin/pages/page2/page2.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { MenuComponent } from './admin/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MatDividerModule } from '@angular/material/divider';
     AdminComponent,
     Page1Component,
     Page2Component,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
