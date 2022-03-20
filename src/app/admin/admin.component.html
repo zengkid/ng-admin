@@ -6,7 +6,10 @@
             <nb-action (click)="toggleSidebar()" icon="menu-outline"></nb-action>
             <nb-action icon="home-outline"></nb-action>
             <nb-action style="flex: auto"></nb-action>
-            <nb-action icon="search-outline"></nb-action>
+            <nb-action  icon="color-palette-outline"
+            [nbContextMenu]="themes"
+            nbContextMenuTag="theme-menu">
+            </nb-action>
             <nb-action icon="person-outline"></nb-action>
             <nb-action (click)="logout()" icon="power-outline">
 

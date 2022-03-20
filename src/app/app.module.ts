@@ -24,6 +24,7 @@ import { AppComponent } from './app.component';
     NbActionsModule,
     NbEvaIconsModule,
     HttpClientModule,
+    NbMenuModule.forRoot(),
     NbAuthModule.forRoot({
       strategies: [
         NbPasswordAuthStrategy.setup({
