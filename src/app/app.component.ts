@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { NbIconLibraries } from '@nebular/theme';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {NbIconLibraries} from '@nebular/theme';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { NbIconLibraries } from '@nebular/theme';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'ng-admin';
 
   constructor(
@@ -16,12 +16,16 @@ export class AppComponent {
     private router: Router,
     private activeRoute: ActivatedRoute
   ) {
-    this.iconLibraries.registerFontPack('fa', { packClass: 'fa', iconClassPrefix: 'fa' });
-    this.iconLibraries.registerFontPack('fas', { packClass: 'fa-solid', iconClassPrefix: 'fa' });
-    this.iconLibraries.registerFontPack('far', { packClass: 'fa-regular', iconClassPrefix: 'fa' });
+    this.iconLibraries.registerFontPack('fa', {packClass: 'fa', iconClassPrefix: 'fa'});
+    this.iconLibraries.registerFontPack('fas', {packClass: 'fa-solid', iconClassPrefix: 'fa'});
+    this.iconLibraries.registerFontPack('far', {packClass: 'fa-regular', iconClassPrefix: 'fa'});
     // this.iconLibraries.registerFontPack('fal', { packClass: 'fa-light', iconClassPrefix: 'fa' });
     // this.iconLibraries.registerFontPack('fat', { packClass: 'fa-thin', iconClassPrefix: 'fa' });
     // this.iconLibraries.registerFontPack('fad', { packClass: 'fa-duotone', iconClassPrefix: 'fa' });
     // this.iconLibraries.setDefaultPack('fa');// <---- set as default
+  }
+
+  ngOnInit(): void {
+    this.router.navigateByUrl("/admin");
   }
 }

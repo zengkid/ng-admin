@@ -1,12 +1,20 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { NbPasswordAuthStrategy, NbAuthModule, NbAuthJWTToken } from '@nebular/auth';
-import { NbActionsModule, NbIconModule, NbLayoutModule, NbMenuModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http';
+import {NbAuthJWTToken, NbAuthModule, NbPasswordAuthStrategy} from '@nebular/auth';
+import {
+  NbActionsModule,
+  NbIconModule,
+  NbLayoutModule,
+  NbMenuModule,
+  NbSidebarModule,
+  NbThemeModule
+} from '@nebular/theme';
+import {NbEvaIconsModule} from '@nebular/eva-icons';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {AuthGuard} from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +57,7 @@ import { AppComponent } from './app.component';
     }),
 
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
